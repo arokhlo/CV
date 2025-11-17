@@ -1,90 +1,244 @@
 <!DOCTYPE html>
-<!-- saved from url=(0055)file:///C:/000000000000000000/111111111111/index55.html -->
-<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charsemt=UTF-8">
-    
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mortaza Zolfpour-Arokhlo - CV</title>
-
     <style>
-        /* British English styling */
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
+        /* Modern styling with improved visual appeal */
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap');
+
+        :root {
+            --primary: #2c5aa0;
+            --primary-light: #4a7bc8;
+            --secondary: #e63946;
+            --accent: #f4a261;
+            --dark: #333;
+            --light: #f9f9f9;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
 
         body {
-            font-family: 'Source Serif Pro', serif;
+            font-family: 'Source Sans Pro', sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 900px;
+            color: var(--dark);
+            background-color: var(--light);
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f9f9f9;
         }
 
         .cv-container {
             background: white;
             padding: 40px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            position: relative;
+            overflow: hidden;
         }
 
         .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            margin-bottom: 25px;
-            border-bottom: 2px solid #2c5aa0;
-            padding-bottom: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
         h1 {
-            font-size: 32px;
-            margin: 0;
-            color: #2c5aa0;
+            font-size: 36px;
+            margin: 0 0 5px 0;
+            color: var(--primary);
             font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 15px;
         }
 
         .contact-info {
-            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
             font-size: 16px;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+            position: relative;
         }
 
         h2 {
-            font-size: 20px;
-            color: #2c5aa0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+            font-size: 22px;
+            color: var(--primary);
             margin-bottom: 15px;
-            font-weight: 600;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 25px;
+            background-color: var(--accent);
+            border-radius: 2px;
         }
 
         ul {
             padding-left: 20px;
+            margin: 0;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            position: relative;
         }
 
         .date-location {
             font-style: italic;
-            color: #666;
+            color: var(--gray);
             float: right;
+            font-weight: 400;
         }
 
         .job-title {
             font-weight: 600;
-            color: #444;
+            color: var(--dark);
         }
 
         .organisation {
             font-weight: 600;
-            color: #2c5aa0;
+            color: var(--primary);
         }
 
         .two-column {
             column-count: 2;
-            column-gap: 30px;
+            column-gap: 10px;
+        }
+
+        .portfolio-item {
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .portfolio-item:last-child {
+            border-bottom: none;
+        }
+
+        .portfolio-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .portfolio-description {
+            color: var(--dark);
+            font-size: 15px;
+        }
+
+        .publication-item {
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+
+        .skill-category {
+            margin-bottom: 8px;
+        }
+
+        .skill-category strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .experience-item {
+            margin-bottom: 6px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .experience-org {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .education-item {
+            margin-bottom: 1px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -101,205 +255,257 @@
                 display: block;
                 margin-top: 5px;
             }
+
+            .experience-header, .education-header {
+                flex-direction: column;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
         }
 
-        a {
-            color: #2c5aa0;
-            text-decoration: none;
+        /* Decorative elements */
+        .accent-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
-        a:hover {
-            text-decoration: underline;
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 12px;
         }
-     /* ===================== */
-    /* PRINT PAGE NUMBERING  */
-    /* ===================== */
-
-</style>
-
-
+    </style>
 </head>
 
 <body>
     <div class="cv-container">
+        <div class="accent-bar"></div>
+        
         <!-- Header Section -->
-<div class="header">
-    <h1 style="line-height: 1.2; margin-bottom: 5px;">
-        Mortaza Zolfpour-Arokhlo <br>
-        <span style="font-weight: normal; font-size: 20px; line-height: 3.2;">Full Stack Software Developer</span>
-    </h1>
-
-    <div class="contact-info" style="line-height: 0.3;">
-        Preston, PR1, UK |
-        <a href="mailto:mortazazolfpour@gmail.com">mortazazolfpour@gmail.com</a> |
-        <a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&amp;hl=en">Google Scholar</a>|
-        <a href="https://www.linkedin.com/in/mortaza-zolfpour-arokhlo-20035b290">Linkedin</a>|
-        <a href="https://arokhlo.github.io/CV">GitHub</a>
-    </div>
-</div>
-        <br>
+        <div class="header">
+            <h1>Mortaza Zolfpour-Arokhlo</h1>
+            <div class="title">Full Stack Software Developer</div>
+            <div class="contact-info">
+                <div class="contact-item">📍 Preston, PR1, UK</div>
+                <div class="contact-item">✉️ <a href="mailto:mortazazolfpour@gmail.com">mortazazolfpour@gmail.com</a></div>
+                <div class="contact-item">🔍 <a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&hl=en">Google Scholar</a></div>
+                <div class="contact-item">💼 <a href="https://www.linkedin.com/in/mortaza-zolfpour-arokhlo-20035b290">LinkedIn</a></div>
+                <div class="contact-item">🐙 <a href="https://arokhlo.github.io/CV">GitHub</a></div>
+            </div>
+        </div>
+        
         <!-- Professional Summary -->
-<div class="section">
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">Professional Summary</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
-        Experienced Software Developer and IT Leader with a PhD in Computer Science and over 20 years of combined
-        academic and industry experience in software engineering, artificial intelligence, and IT systems. Accomplished
-        Full Stack Developer with strong front-end expertise in HTML, CSS, and JavaScript, and proficient in frameworks
-        such as Django. Skilled in back-end development using Python and PHP, with practical experience in version
-        control via GitHub and Heroku, and database management using PostgreSQL and MySQL. Possesses a broad technical background encompassing web and software development, electronics, communications, and logistics. Demonstrated ability to produce clean, maintainable, and efficient code, as evidenced by
-        participation in the <em>Getting Connected Hackathon</em>. Strong communication and problem-solving abilities,
-        enhanced through leadership roles in the hospitality sector, where process improvements achieved a 20% increase
-        in service efficiency. Dedicated to applying technical expertise in support of charitable and non-profit
-        initiatives.
-      </p>
-    </div>
-<br>
-    <!-- Portfolio Highlights -->
-<div class="section">
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">Portfolio Highlights</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+               Experienced Software Developer and IT Leader with a PhD in Computer Science and 20+ years in software engineering, AI, and IT systems. Full Stack Developer proficient in HTML, CSS, JavaScript, Django, Python, and PHP, with hands-on experience in GitHub, Heroku, PostgreSQL, and MySQL. Broad technical expertise across software development, electronics, communications, and logistics. Demonstrated ability to deliver clean, maintainable code through hackathon participation. Strong problem-solver with leadership experience in hospitality, achieving 20% efficiency improvements. Committed to supporting charitable and non-profit initiatives through technical expertise.
+            </p>
+        </div>
 
-      </p><ul>
-        <li>
-          <strong><a href="https://arokhlo.github.io/diversity-inclusion-project/">Diversity &amp; Inclusion Web Platform</a></strong> –
-          Designed and developed an interactive dashboard promoting workplace diversity and inclusion using HTML, CSS, and JavaScript.
-        </li>
-        <li>
-          <strong><a href="https://chinookmusicdbpro-1a8fd737fe52.herokuapp.com/">Chinook Database Management System</a></strong> –
-          Full Stack Django application connected to PostgreSQL for managing and querying music data, including authentication and CRUD functionality.
-        </li>
-        <li>
-          <strong><a href="https://richardv10.github.io/pac-man-extreme/">Pac-Man Extreme (JavaScript Game)</a></strong> –
-          Browser-based version of Pac-Man using HTML5 Canvas and JavaScript, showcasing animations and event-driven logic.
-        </li>
-        <li>
-          <strong><a href="https://arokhlo.github.io/Love-Maths/">Love Maths Web App</a></strong> –
-          Interactive maths quiz game built with HTML, CSS, and JavaScript to support learning engagement.
-        </li>
-        <li>
-          <strong><a href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/marketplace/">Mini Social Platform</a></strong> –
-          <em>Our Corner<em> is a mini social platform for local communities, offering a post feed, event listings, and a marketplace for neighbors to connect and trade.
-        </li>
-      </ul>
-    </div>
-<br>
-    <!-- Technical Skills -->
-    <div class="section">
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">Technical Skills</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
-      </p><div class="two-column">
-        <ul>
-          <li><strong>Languages:</strong> HTML, CSS, JavaScript, Python</li>
-          <li><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL</li>
-          <li><strong>Libraries:</strong> Bootstrap</li>
-          <li><strong>Version Control:</strong> Git, GitHub, Heroku</li>
-          <li><strong>Frameworks:</strong> Flask, Django, Bootstrap</li>
-        </ul>
-      </div>
-    </div>
-<br>
-    <!-- Education and Training -->
-    <div class="section">
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">Education and Training</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
-      </p><p><span class="job-title">Full Stack Software Development Skills Bootcamp</span>,
-        <span class="organisation">Code Institute</span>
-        <span class="date-location">Jul – Nov 2025</span>
-      </p>
-      <p><span class="job-title">PhD in Computer Science</span>,
-        <span class="organisation">University of Technology Malaysia</span>
-        <span class="date-location">2010 – 2013</span>
-      </p>
-      <p><span class="job-title">MSc in IT Engineering</span>,
-        <span class="organisation">Shiraz University, Iran</span>
-        <span class="date-location">2006 – 2008</span>
-      </p>
-      <p><span class="job-title">MSc in Industrial Engineering</span>,
-        <span class="organisation">Iran Postgraduate Institute of Industry</span>
-        <span class="date-location">1997 – 2000</span>
-      </p>
-      <p><span class="job-title">BSc in Mathematics</span>,
-        <span class="organisation">Razi University, Iran</span>
-        <span class="date-location">1990 – 1994</span>
-      </p>
-    </div>
-<br>
-    <!-- Professional Experience -->
-    <div class="section">
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">Professional Experience</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
-      </p><p><span class="job-title">Assistant Professor</span>,
-        <span class="organisation">Islamic Azad University, Iran</span>
-        <span class="date-location">2010 – 2024</span><br>
-        Taught and developed courses in software engineering, databases, AI, and cybersecurity. Supervised over
-        100 IT projects, led digital transformation initiatives, and consulted on system design and development.
-      </p>
+        <!-- Portfolio Highlights -->
+        <div class="section">
+            <h2>Portfolio Highlights</h2>
+            <div class="portfolio-item">
+                <div class="portfolio-title"><a href="https://arokhlo.github.io/diversity-inclusion-project/">Diversity & Inclusion Web Platform</a></div>
+                <div class="portfolio-description">Designed and developed an interactive dashboard promoting workplace diversity and inclusion using HTML, CSS, and JavaScript.</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-title"><a href="https://chinookmusicdbpro-1a8fd737fe52.herokuapp.com/">Chinook Database Management System</a></div>
+                <div class="portfolio-description">Full Stack Django application connected to PostgreSQL for managing and querying music data, including authentication and CRUD functionality.</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-title"><a href="https://richardv10.github.io/pac-man-extreme/">Pac-Man Extreme (JavaScript Game)</a></div>
+                <div class="portfolio-description">Browser-based version of Pac-Man using HTML5 Canvas and JavaScript, showcasing animations and event-driven logic.</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-title"><a href="https://arokhlo.github.io/Love-Maths/">Love Maths Web App</a></div>
+                <div class="portfolio-description">Interactive maths quiz game built with HTML, CSS, and JavaScript to support learning engagement.</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-title"><a href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/marketplace/">Mini Social Platform</a></div>
+                <div class="portfolio-description"><em>Our Corner</em> is a mini social platform for local communities, offering a post feed, event listings, and a marketplace for neighbors to connect and trade.</div>
+            </div>
+        </div>
 
-      <p><span class="job-title">Postdoctoral Researcher</span>,
-        <span class="organisation">Complutense University of Madrid, Spain</span>
-        <span class="date-location">2020 – 2021</span><br>
-        Conducted applied AI research in smart transportation and multi-agent systems. Developed simulation models for route planning.
-      </p>
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="two-column">
+                <div class="skill-category">
+                    <strong>Languages:</strong> HTML, CSS, JavaScript, Python, PHP
+                </div>
+                <div class="skill-category">
+                    <strong>Databases:</strong> MySQL, PostgreSQL
+                </div>
+                <div class="skill-category">
+                    <strong>Libraries:</strong> Bootstrap
+                </div>
+                <div class="skill-category">
+                    <strong>Version Control:</strong> Git, GitHub, Heroku
+                </div>
+                <div class="skill-category">
+                    <strong>Frameworks:</strong> Django, Bootstrap
+                </div>
+            </div>
+        </div>
 
-      <p><span class="job-title">Postdoctoral Fellow</span>,
-        <span class="organisation">University of Technology Malaysia</span>
-        <span class="date-location">2014 – 2015</span><br>
-        Worked on agent-based software systems and intelligent web technologies within transport and logistics domains.
-      </p>
+        <!-- Education and Training -->
+        <div class="section">
+            <h2>Education and Training</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">Full Stack Software Development Skills Bootcamp</span>,
+                        <span class="organisation">Code Institute</span>
+                    </div>
+                    <span class="date-location">Jul – Nov 2025</span>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">PhD in Computer Science</span>,
+                        <span class="organisation">University of Technology Malaysia</span>
+                    </div>
+                    <span class="date-location">2010 – 2013</span>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">MSc in IT Engineering</span>,
+                        <span class="organisation">Shiraz University, Iran</span>
+                    </div>
+                    <span class="date-location">2006 – 2008</span>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">MSc in Industrial Engineering</span>,
+                        <span class="organisation">Iran Postgraduate Institute of Industry</span>
+                    </div>
+                    <span class="date-location">1997 – 2000</span>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">BSc in Mathematics</span>,
+                        <span class="organisation">Razi University, Iran</span>
+                    </div>
+                    <span class="date-location">1990 – 1994</span>
+                </div>
+            </div>
+        </div>
 
-      <p><span class="job-title">Director of ICT</span>,
-        <span class="organisation">Islamic Azad University, Marvdasht Branch, Iran</span>
-        <span class="date-location">2003 – 2009</span><br>
-        Led a software development team to build and maintain academic systems. Oversaw full-stack development, project planning, and delivery.
-      </p>
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">Assistant Professor</span>,
+                        <span class="experience-org">Islamic Azad University, Iran</span>
+                    </div>
+                    <span class="date-location">2010 – 2024</span>
+                </div>
+                <div>Taught and developed courses in software engineering, databases, AI, and cybersecurity. Supervised over 100 IT projects, led digital transformation initiatives, and consulted on system design and development.</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">Postdoctoral Researcher</span>,
+                        <span class="experience-org">Complutense University of Madrid, Spain</span>
+                    </div>
+                    <span class="date-location">2020 – 2021</span>
+                </div>
+                <div>Conducted applied AI research in smart transportation and multi-agent systems. Developed simulation models for route planning.</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">Postdoctoral Fellow</span>,
+                        <span class="experience-org">University of Technology Malaysia</span>
+                    </div>
+                    <span class="date-location">2014 – 2015</span>
+                </div>
+                <div>Worked on agent-based software systems and intelligent web technologies within transport and logistics domains.</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">Director of ICT</span>,
+                        <span class="experience-org">Islamic Azad University, Marvdasht Branch, Iran</span>
+                    </div>
+                    <span class="date-location">2003 – 2009</span>
+                </div>
+                <div>Led a software development team to build and maintain academic systems. Oversaw full-stack development, project planning, and delivery.</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">Junior Software Engineer</span>,
+                        <span class="experience-org">Shiraz Shahed Industrial Complex, Iran</span>
+                    </div>
+                    <span class="date-location">1996 – 2002</span>
+                </div>
+                <div>I developed and maintained company applications using FoxPro and QuickBasic, including a library management system.</div>
+            </div>
+        </div>
 
-      <p><span class="job-title">Software Developer</span>,
-        <span class="organisation">Shiraz Shahed Industrial Complex, Iran</span>
-        <span class="date-location">1996 – 2002</span><br>
-        Designed and implemented enterprise software systems, leading internal tools development and system upgrades.
-      </p>
-    </div>
-<br>
-    <!-- Publications -->
-    <div class="section">
+        <!-- Publications -->
+        <div class="section">
+            <h2>Selected Publications</h2>
+            <div class="publication-item">
+                Zolfpour-Arokhlo, M. et al. (2014). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086">Modelling route planning using Q-learning with multi-agent systems</a>, <em>Engineering Applications of Artificial Intelligence</em>, 29, 163–177.
+            </div>
+            <div class="publication-item">
+                Zolfpour-Arokhlo, M. et al. (2013). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417412010019">Multi-agent supply chain route planning</a>. <em>Expert Systems with Applications</em>, 40(5), 1505–1518.
+            </div>
+            <div class="publication-item">
+                Zolfpour-Arokhlo, M. et al. (2011). <a href="https://produccioncientifica.ucm.es/documentos/61fa8a58565bff40e6e7b79f">Multi-agent reinforcement learning for route guidance system</a>. <em>International Journal of Advancements in Computing Technology</em>, 3(6), 224-232.
+            </div>
+            <div class="publication-item">
+                Zolfpour-Arokhlo, M. et al. (2011). <a href="https://ieeexplore.ieee.org/abstract/document/6084092">A fast path planning algorithm for route guidance system</a>. <em>IEEE International Conference on Systems, Man and Cybernetics</em>, 1-25.
+            </div>
+            <div class="publication-item">
+                Full list available upon request or via <a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&hl=en">Google Scholar</a>.
+            </div>
+        </div>
 
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">Selected Publications</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
-      </p><ul>
-        <li>Zolfpour-Arokhlo, M. et al. (2014). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086
-">Modelling route planning using Q-learning with multi-agent systems, <em> Engineering Applications of Artificial Intelligence</em></a>, 29, 163–177.</li>
-          
-        <li>Zolfpour-Arokhlo, M. et al. (2013). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417412010019">“Multi-agent supply chain route planning.” <em>Expert Systems with Applications</em>, 40(5), 1505–1518.</li>
-
-        <li>Zolfpour-Arokhlo, M. et al.  (2011).<a href="https://produccioncientifica.ucm.es/documentos/61fa8a58565bff40e6e7b79f
-">Multi-agent reinforcement learning for route guidance system” <em>International Journal of Advancements in Computing Technology </em>, 3(6), 224-232.</li>
-
-<li>Zolfpour-Arokhlo, M. et al.  (2011).<a href="https://ieeexplore.ieee.org/abstract/document/6084092">A fast path planning algorithm for route guidance system” <em>IEEE International Conference on Systems, Man and Cybernetics</em>, 1-25.</li>
-    <li>Full list available upon request or via <a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&amp;hl=en">Google Scholar</a>.</li>
-      </ul>
-    </div>
-<!-- <br><br> -->
-              <br>
-    <!-- Certifications -->
-    <div class="section">
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">Certifications &amp; Achievements</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
-      </p><ul>
-        <li>International Doctoral Fellowship, UTM Malaysia – £30,000 (2010–2013)</li>
-        <li>Patent: Route Guidance Algorithm using Multi-agent Reinforcement Learning (2012)</li>
-        <li>Reviewer for IEEE Transactions on Cybernetics, Elsevier, and Springer</li>
-        <li>Editor-in-Chief, IJ-AI and IJSET (2013–present)</li>
+        <!-- Certifications -->
+        <div class="section">
+            <h2>Certifications & Achievements</h2>
+            <ul>
+                <li>International Doctoral Fellowship, UTM Malaysia – £30,000 (2010–2013)</li>
+                <li>Patent: Route Guidance Algorithm using Multi-agent Reinforcement Learning (2012)</li>
+                <li>Reviewer for IEEE Transactions on Cybernetics, Elsevier, and Springer</li>
+                <li>Editor-in-Chief, IJ-AI and IJSET (2013–present)</li>
                 <li>Postdoctoral Researcher, Complutense University of Madrid, Spain (2020–2021)</li>
-      </ul>
-    </div>
-<br>
-    <!-- References -->
-    <div class="section">
-    <h2 style="margin: 0 0 5px 0; padding: 0; line-height: 1.1;">References</h2>
-    <p style="line-height: 1.5; margin: 0; padding: 0; text-align: justify; font-size: 16px;">
-      </p><p>Available upon request.</p>
-    </div>
-  </div>
+            </ul>
+        </div>
 
-
-</body></html>
+        <!-- References -->
+        <div class="section">
+            <h2>References</h2>
+            <p>Available upon request.</p>
+        </div>
+    </div>
+</body>
+</html>
