@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Mortaza Zolfpour‑Arokhlo · PhD · Full‑Stack Developer CV</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Mortaza Zolfpour‑Arokhlo · PhD · Full‑Stack Developer CV</title>
+<style>
         /* ----- MODERN RESET & VARIABLES ----- */
         * {
             margin: 0;
+            margin-top: -0.3rem;
             padding: 0;
             box-sizing: border-box;
         }
@@ -50,9 +52,9 @@
 
         /* ----- HEADER with improved hierarchy ----- */
         .header {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.1rem;
             border-bottom: 2px solid #e2edf2;
-            padding-bottom: 1.25rem;
+            padding-bottom: 1.1rem;
         }
 
         h1 {
@@ -145,8 +147,8 @@
         .skills-cloud {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem;
-            margin: 0.8rem 0 0.5rem;
+            gap: 0.4rem;
+            margin: 0.7rem 0 0.5rem;
         }
         .skill-tag {
             background: #eef2fa;
@@ -261,8 +263,8 @@
 
         /* experience & education items */
         .exp-item, .edu-item {
-            margin-bottom: 1rem;
-            padding-bottom: 0.65rem;
+            margin-bottom: 0.2rem;
+            padding-bottom: 0.45rem;
             border-bottom: 1px solid #eef2f8;
         }
         .exp-title {
@@ -290,7 +292,7 @@
             padding-left: 0;
         }
         .publication-list li {
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.4rem;
             font-size: 0.88rem;
         }
 
@@ -337,196 +339,184 @@
 </head>
 <body>
 <div class="cv-container">
-    <div class="cv-inner">
-        <!-- Header (aligned with attached CV) -->
-        <div class="header">
-            <h1>Mortaza Zolfpour‑Arokhlo</h1>
-            <div class="subhead-line">PhD · Full‑Stack Developer · AI Researcher</div>
-            <div class="contact-bar">
-                <div class="contact-details">
-                    <span>📍 Preston, UK</span>
-                    <span>📞 <a href="tel:+447426050400">07426 050400</a></span>
-                    <span>✉️ <a href="mailto:mortazazolfpour@gmail.com">mortazazolfpour@gmail.com</a></span>
-                </div>
-                <div class="social-links">
-                    <a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&hl=en" target="_blank" rel="noopener">🎓 Scholar</a>
-                    <a href="https://www.linkedin.com/in/mortaza-za" target="_blank" rel="noopener">🔗 LinkedIn</a>
-                    <a href="https://github.com/arokhlo" target="_blank" rel="noopener">🐙 GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- professional summary (based on original CV + personal statement) -->
-        <p style="font-size: 1rem; margin-bottom: 0.8rem;"><strong>PhD-qualified software developer</strong> with 20+ years of experience in full‑stack development, database design, and research‑led innovation. Proficient in <strong>HTML/CSS, JavaScript, Python/Django, PostgreSQL, Git, and Heroku</strong>. Proven ability to build and maintain web applications, contribute to open‑source projects, and support non‑profits through technology. Looking for a Software Developer role where I can write clean code, solve problems, and collaborate effectively.</p>
-        
-        <div class="personal-card">
-            <h2 style="margin-top: 0; border-left-color: #ffb347; font-size: 1.3rem;">📌 Personal Statement</h2>
-            <p>I am a disciplined, detail‑oriented developer who enjoys turning requirements into clean, maintainable code. I work well in teams, communicate clearly, and take ownership of tasks – whether it’s debugging a legacy system, deploying a new feature, or supporting end‑users. Passionate about using technology to solve real‑world problems and always eager to learn new tools and workflows.</p>
-        </div>
-
-        <!-- Technical Skills (exactly from original CV) -->
-        <h2>🛠 Technical Skills</h2>
-        <div class="skills-cloud">
-            <span class="skill-tag">HTML5 / CSS3</span>
-            <span class="skill-tag">JavaScript (ES6)</span>
-            <span class="skill-tag">Python / Django</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">PHP</span>
-            <span class="skill-tag">React / Bootstrap</span>
-            <span class="skill-tag">PostgreSQL / MySQL / SQLite</span>
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">Heroku / AWS (basic)</span>
-            <span class="skill-tag">Docker (basic)</span>
-            <span class="skill-tag">REST APIs</span>
-        </div>
-
-        <!-- Projects section (toggle card/list) based on original CV content) -->
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
-            <h2 style="margin-bottom: 0;">🚀 Key Projects</h2>
-            <button class="view-toggle" id="toggleViewBtn">Switch to List View</button>
-        </div>
-
-        <!-- CARD VIEW (enhanced, matches attached projects) -->
-        <div id="cardView" class="portfolio-grid">
-            <!-- Chinook Database -->
-            <div class="portfolio-card">
-                <div class="card-accent"></div>
-                <div class="portfolio-content">
-                    <div class="portfolio-title"><a href="https://chinookmusicdbpro-318672ff6425.herokuapp.com/" target="_blank" rel="noopener">Chinook Database System</a></div>
-                    <div class="portfolio-description">Full-stack Django music store dashboard with complex SQL queries, authentication, and PostgreSQL. Deployed on Heroku.</div>
-                    <div class="tech-stack"><span class="tech-badge">Django</span><span class="tech-badge">Python</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">Heroku</span></div>
-                    <a href="https://chinookmusicdbpro-318672ff6425.herokuapp.com/" class="portfolio-link-btn" target="_blank">Live Demo →</a>
-                </div>
-            </div>
-            <!-- Diversity & Inclusion -->
-            <div class="portfolio-card">
-                <div class="card-accent"></div>
-                <div class="portfolio-content">
-                    <div class="portfolio-title"><a href="https://arokhlo.github.io/diversity-inclusion-project/" target="_blank" rel="noopener">Diversity & Inclusion Dashboard</a></div>
-                    <div class="portfolio-description">Interactive front-end data visualisation promoting workplace diversity. Built with HTML, CSS, vanilla JavaScript.</div>
-                    <div class="tech-stack"><span class="tech-badge">HTML/CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Chart.js</span></div>
-                    <a href="https://arokhlo.github.io/diversity-inclusion-project/" class="portfolio-link-btn" target="_blank">Live Demo →</a>
-                </div>
-            </div>
-            <!-- Our Corner Social Platform -->
-            <div class="portfolio-card">
-                <div class="card-accent"></div>
-                <div class="portfolio-content">
-                    <div class="portfolio-title"><a href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/" target="_blank" rel="noopener">Our Corner Social Platform</a></div>
-                    <div class="portfolio-description">Community marketplace with user authentication, posts, events, and marketplace features (Django/Python/JS).</div>
-                    <div class="tech-stack"><span class="tech-badge">Django</span><span class="tech-badge">JavaScript</span><span class="tech-badge">PostgreSQL</span></div>
-                    <a href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/" class="portfolio-link-btn" target="_blank">Live Demo →</a>
-                </div>
-            </div>
-            <!-- NeoGrocery Pro -->
-            <div class="portfolio-card">
-                <div class="card-accent"></div>
-                <div class="portfolio-content">
-                    <div class="portfolio-title"><a href="https://arokhlo.github.io/NeoGroceryPro/" target="_blank" rel="noopener">NeoGrocery Pro</a></div>
-                    <div class="portfolio-description">Modern grocery management with 175+ products, real-time cart, discount codes, printable invoices, LocalStorage persistence & versioned JSON export.</div>
-                    <div class="tech-stack"><span class="tech-badge">HTML/CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">LocalStorage</span></div>
-                    <a href="https://arokhlo.github.io/NeoGroceryPro/" class="portfolio-link-btn" target="_blank">Live Demo →</a>
-                </div>
-            </div>
-            <!-- Preston City of Sanctuary (live site) -->
-            <div class="portfolio-card">
-                <div class="card-accent"></div>
-                <div class="portfolio-content">
-                    <div class="portfolio-title"><a href="https://preston.cityofsanctuary.org/" target="_blank" rel="noopener">Preston City of Sanctuary</a></div>
-                    <div class="portfolio-description">Website maintenance, improvements, HTML/CSS fixes, volunteer-driven development for refugee support charity.</div>
-                    <div class="tech-stack"><span class="tech-badge">HTML/CSS</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">Git</span></div>
-                    <a href="https://preston.cityofsanctuary.org/" class="portfolio-link-btn" target="_blank">Visit site →</a>
-                </div>
-            </div>
-            <!-- Research: Modelling Route Planning -->
-            <div class="portfolio-card">
-                <div class="card-accent"></div>
-                <div class="portfolio-content">
-                    <div class="portfolio-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" target="_blank" rel="noopener">AI Route Planning (Elsevier)</a></div>
-                    <div class="portfolio-description">Multi-agent reinforcement learning for dynamic route guidance, published in Engineering Applications of AI.</div>
-                    <div class="tech-stack"><span class="tech-badge">Java</span><span class="tech-badge">MAS</span><span class="tech-badge">Reinforcement Learning</span></div>
-                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" class="portfolio-link-btn" target="_blank">Read Paper →</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- LIST VIEW (alternative representation - matches same projects) -->
-        <div id="listView" class="hidden">
-            <ul style="margin-top: 0.5rem;">
-                <li><strong><a href="https://chinookmusicdbpro-318672ff6425.herokuapp.com/" target="_blank">Chinook Database System</a></strong> – Django, Python, PostgreSQL, Heroku. Full-stack music store dashboard.</li>
-                <li><strong><a href="https://arokhlo.github.io/diversity-inclusion-project/" target="_blank">Diversity & Inclusion Dashboard</a></strong> – Interactive front‑end data visualisation (HTML/CSS/JS).</li>
-                <li><strong><a href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/" target="_blank">Our Corner Social Platform</a></strong> – Django community marketplace with user auth & events.</li>
-                <li><strong><a href="https://arokhlo.github.io/NeoGroceryPro/" target="_blank">NeoGrocery Pro</a></strong> – Client‑side shopping list with localStorage, Bootstrap, discount system.</li>
-                <li><strong><a href="https://preston.cityofsanctuary.org/" target="_blank">Preston City of Sanctuary website</a></strong> – live site maintenance & improvements (volunteer).</li>
-                <li><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" target="_blank">Modelling route planning using Q-learning</a></strong> – Elsevier AI journal publication.</li>
-                <li><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417412010019" target="_blank">Multi-agent supply chain route planning</a></strong> – Expert Systems with Applications.</li>
-            </ul>
-        </div>
-
-        <!-- Professional Experience (aligned with original CV + volunteer role) -->
-        <h2>💼 Professional Experience</h2>
-        <div class="exp-item">
-            <div class="exp-title">Software Developer (Volunteer) – Preston City of Sanctuary</div>
-            <div class="exp-meta">Oct 2025 – Present · Preston, UK</div>
-            <div class="exp-desc">Website maintenance, fixing HTML/CSS issues, adding new pages using Bootstrap. Provide IT support and basic digital skills training to refugees and asylum seekers. Collaborate with the team to improve the organisation’s online presence.</div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-title">Postdoctoral Researcher – Complutense University of Madrid</div>
-            <div class="exp-meta">2020 – 2021 · Madrid, Spain</div>
-            <div class="exp-desc">Developed simulation models for route planning using Java and multi‑agent systems. Published results in top AI journals (Elsevier).</div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-title">Assistant Professor – Islamic Azad University, Iran</div>
-            <div class="exp-meta">2010 – 2020 · Iran</div>
-            <div class="exp-desc">Taught software engineering, web development, and databases. Supervised 100+ student projects (many with Django/PHP/MySQL). Led curriculum updates to include modern frameworks.</div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-title">Director of ICT – Islamic Azad University, Iran</div>
-            <div class="exp-meta">2003 – 2009 · Marvdasht, Iran</div>
-            <div class="exp-desc">Led a team of 5 developers to build university information systems (student records, library management). Full‑stack role: front‑end, backend (PHP/MySQL), and server administration.</div>
-        </div>
-
-        <!-- Education & Training (only verified from original CV) -->
-        <h2>🎓 Education & Training</h2>
-        <div class="edu-item">
-            <div class="exp-title">Diploma in Full Stack Software Development</div>
-            <div class="exp-meta">Code Institute (2025 – 2026) · HTML, CSS, JavaScript, Python, Django, PostgreSQL, Git, Heroku</div>
-        </div>
-        <div class="edu-item">
-            <div class="exp-title">PhD in Computer Science</div>
-            <div class="exp-meta">University of Technology Malaysia (2010–2013) – Multi-agent reinforcement learning for route guidance</div>
-        </div>
-        <div class="edu-item">
-            <div class="exp-title">MSc in IT Engineering</div>
-            <div class="exp-meta">Shiraz University, Iran</div>
-        </div>
-        <div class="edu-item">
-            <div class="exp-title">BSc Mathematics</div>
-            <div class="exp-meta">Razi University, Iran</div>
-        </div>
-
-        <!-- Selected Publications (peer-reviewed, original CV) -->
-        <h2>📄 Selected Publications</h2>
-        <ul class="publication-list" style="list-style: none; padding-left:0;">
-            <li>• Zolfpour‑Arokhlo, M. et al. (2014). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" target="_blank">Modelling route planning using Q‑learning with multi‑agent systems</a> – <em>Engineering Applications of Artificial Intelligence</em> (Elsevier)</li>
-            <li>• Zolfpour‑Arokhlo, M. et al. (2013). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417412010019" target="_blank">Multi‑agent supply chain route planning</a> – <em>Expert Systems with Applications</em> (Elsevier)</li>
-            <li>• Full list available on <a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-        </ul>
-
-        <!-- Certifications & Achievements (from original CV) -->
-        <h2>🏅 Certifications & Achievements</h2>
-        <ul>
-            <li>Patent: Route Guidance Algorithm using Multi-agent Reinforcement Learning (2012)</li>
-            <li>Reviewer for <em>IEEE Transactions on Cybernetics</em>, <em>Elsevier</em>, <em>Springer</em></li>
-            <li>Editor‑in‑Chief, <em>International Journal of AI</em> (2013–present)</li>
-        </ul>
-        
-        <div class="ref-note">
-            📎 References available upon request. Full portfolio & GitHub repos linked above.
-        </div>
-    </div>
+<div class="cv-inner">
+<!-- Header (aligned with attached CV) -->
+<div class="header">
+<h1>Mortaza Zolfpour‑Arokhlo</h1>
+<div class="subhead-line">PhD · Full‑Stack Developer · AI Researcher</div>
+<div class="contact-bar">
+<div class="contact-details">
+<span>📍 Preston, UK</span>
+<span>📞 <a href="tel:+447426050400">07426 050400</a></span>
+<span>✉️ <a href="mailto:mortazazolfpour@gmail.com">mortazazolfpour@gmail.com</a></span>
 </div>
-
+<div class="social-links">
+<a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&amp;hl=en" rel="noopener" target="_blank">🎓 Scholar</a>
+<a href="https://www.linkedin.com/in/mortaza-za" rel="noopener" target="_blank">🔗 LinkedIn</a>
+<a href="https://github.com/arokhlo" rel="noopener" target="_blank">🐙 GitHub</a>
+</div>
+</div>
+</div>
+<!-- professional summary (based on original CV + personal statement) -->
+<p style="font-size: 1rem; margin-bottom: 0.8rem;"><strong>PhD-qualified software developer</strong> with 20+ years of experience in full‑stack development, database design, and research‑led innovation. Proficient in <strong>HTML/CSS, JavaScript, Python/Django, PostgreSQL, Git, and Heroku</strong>. Proven ability to build and maintain web applications, contribute to open‑source projects, and support non‑profits through technology. Looking for a Software Developer role where I can write clean code, solve problems, and collaborate effectively.</p><div style="background:#f8fafc;border-left:4px solid #ffb347;padding:1rem;margin:1rem 0;border-radius:12px;"><strong>Volunteer &amp; Community Impact</strong><br/>I volunteer with <strong>Preston City of Sanctuary</strong> and <strong>RAIS Lancaster</strong> as a caseworker, supporting refugees and asylum seekers. My role includes assisting with casework, providing IT and digital support, maintaining websites, and delivering basic computer skills training to help individuals access essential services and guidance.</div>
+<div class="personal-card">
+<h2 style="margin-top: 0; border-left-color: #ffb347; font-size: 1.3rem;">📌 Personal Statement</h2>
+<p>I am a disciplined, detail‑oriented developer who enjoys turning requirements into clean, maintainable code. I work well in teams, communicate clearly, and take ownership of tasks – whether it’s debugging a legacy system, deploying a new feature, or supporting end‑users. Passionate about using technology to solve real‑world problems and always eager to learn new tools and workflows.</p>
+</div>
+<!-- Technical Skills (exactly from original CV) -->
+<h2>🛠 Technical Skills</h2>
+<div class="skills-cloud">
+<span class="skill-tag">HTML5 / CSS3</span>
+<span class="skill-tag">JavaScript (ES6)</span>
+<span class="skill-tag">Python / Django</span>
+<span class="skill-tag">Java</span>
+<span class="skill-tag">PHP</span>
+<span class="skill-tag">React / Bootstrap</span>
+<span class="skill-tag">PostgreSQL / MySQL / SQLite</span>
+<span class="skill-tag">Git &amp; GitHub</span>
+<span class="skill-tag">Heroku / AWS (basic)</span>
+</div>
+<!-- Projects section (toggle card/list) based on original CV content) -->
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
+<h2 style="margin-bottom: 0;">🚀 Key Projects</h2>
+<button class="view-toggle" id="toggleViewBtn">Switch to List View</button>
+</div>
+<!-- CARD VIEW (enhanced, matches attached projects) -->
+<div class="portfolio-grid" id="cardView">
+<!-- Chinook Database -->
+<div class="portfolio-card">
+<div class="card-accent"></div>
+<div class="portfolio-content">
+<div class="portfolio-title"><a href="https://chinookmusicdbpro-318672ff6425.herokuapp.com/" rel="noopener" target="_blank">Chinook Database System</a></div>
+<div class="portfolio-description">Full-stack Django music store dashboard with complex SQL queries, authentication, and PostgreSQL. Deployed on Heroku.</div>
+<div class="tech-stack"><span class="tech-badge">Django</span><span class="tech-badge">Python</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">Heroku</span></div>
+<a class="portfolio-link-btn" href="https://chinookmusicdbpro-318672ff6425.herokuapp.com/" target="_blank">Live Demo →</a>
+</div>
+</div>
+<!-- Diversity & Inclusion -->
+<div class="portfolio-card">
+<div class="card-accent"></div>
+<div class="portfolio-content">
+<div class="portfolio-title"><a href="https://arokhlo.github.io/diversity-inclusion-project/" rel="noopener" target="_blank">Diversity &amp; Inclusion Dashboard</a></div>
+<div class="portfolio-description">Interactive front-end data visualisation promoting workplace diversity. Built with HTML, CSS, vanilla JavaScript.</div>
+<div class="tech-stack"><span class="tech-badge">HTML/CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Chart.js</span></div>
+<a class="portfolio-link-btn" href="https://arokhlo.github.io/diversity-inclusion-project/" target="_blank">Live Demo →</a>
+</div>
+</div>
+<div style="page-break-before: always;"></div>
+<!-- Our Corner Social Platform -->
+<div class="portfolio-card">
+<div class="card-accent"></div>
+<div class="portfolio-content">
+<div class="portfolio-title"><a href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/" rel="noopener" target="_blank">Our Corner Social Platform</a></div>
+<div class="portfolio-description">Community marketplace with user authentication, posts, events, and marketplace features (Django/Python/JS).</div>
+<div class="tech-stack"><span class="tech-badge">Django</span><span class="tech-badge">JavaScript</span><span class="tech-badge">PostgreSQL</span></div>
+<a class="portfolio-link-btn" href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/" target="_blank">Live Demo →</a>
+</div>
+</div>
+<!-- NeoGrocery Pro -->
+<div class="portfolio-card">
+<div class="card-accent"></div>
+<div class="portfolio-content">
+<div class="portfolio-title"><a href="https://arokhlo.github.io/NeoGroceryPro/" rel="noopener" target="_blank">NeoGrocery Pro</a></div>
+<div class="portfolio-description">Modern grocery management with 175+ products, real-time cart, discount codes, printable invoices, LocalStorage persistence &amp; versioned JSON export.</div>
+<div class="tech-stack"><span class="tech-badge">HTML/CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">LocalStorage</span></div>
+<a class="portfolio-link-btn" href="https://arokhlo.github.io/NeoGroceryPro/" target="_blank">Live Demo →</a>
+</div>
+</div>
+<!-- Preston City of Sanctuary (live site) -->
+<div class="portfolio-card">
+<div class="card-accent"></div>
+<div class="portfolio-content">
+<div class="portfolio-title"><a href="https://preston.cityofsanctuary.org/" rel="noopener" target="_blank">Preston City of Sanctuary</a></div>
+<div class="portfolio-description">Website maintenance, improvements, HTML/CSS fixes, volunteer-driven development for refugee support charity.</div>
+<div class="tech-stack"><span class="tech-badge">HTML/CSS</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">Git</span></div>
+<a class="portfolio-link-btn" href="https://preston.cityofsanctuary.org/" target="_blank">Visit site →</a>
+</div>
+</div>
+<!-- Research: Modelling Route Planning -->
+<div class="portfolio-card">
+<div class="card-accent"></div>
+<div class="portfolio-content">
+<div class="portfolio-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" rel="noopener" target="_blank">AI Route Planning (Elsevier)</a></div>
+<div class="portfolio-description">Multi-agent reinforcement learning for dynamic route guidance, published in Engineering Applications of AI.</div>
+<div class="tech-stack"><span class="tech-badge">Java</span><span class="tech-badge">MAS</span><span class="tech-badge">Reinforcement Learning</span></div>
+<a class="portfolio-link-btn" href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" target="_blank">Read Paper →</a>
+</div>
+</div>
+</div>
+<!-- LIST VIEW (alternative representation - matches same projects) -->
+<div class="hidden" id="listView">
+<ul style="margin-top: 0.5rem;">
+<li><strong><a href="https://chinookmusicdbpro-318672ff6425.herokuapp.com/" target="_blank">Chinook Database System</a></strong> – Django, Python, PostgreSQL, Heroku. Full-stack music store dashboard.</li>
+<li><strong><a href="https://arokhlo.github.io/diversity-inclusion-project/" target="_blank">Diversity &amp; Inclusion Dashboard</a></strong> – Interactive front‑end data visualisation (HTML/CSS/JS).</li>
+<li><strong><a href="https://hackathon-social-platform-0d4a6cd4eda3.herokuapp.com/" target="_blank">Our Corner Social Platform</a></strong> – Django community marketplace with user auth &amp; events.</li>
+<li><strong><a href="https://arokhlo.github.io/NeoGroceryPro/" target="_blank">NeoGrocery Pro</a></strong> – Client‑side shopping list with localStorage, Bootstrap, discount system.</li>
+<li><strong><a href="https://preston.cityofsanctuary.org/" target="_blank">Preston City of Sanctuary website</a></strong> – live site maintenance &amp; improvements (volunteer).</li>
+<li><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" target="_blank">Modelling route planning using Q-learning</a></strong> – Elsevier AI journal publication.</li>
+<li><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417412010019" target="_blank">Multi-agent supply chain route planning</a></strong> – Expert Systems with Applications.</li>
+</ul>
+</div>
+<!-- Professional Experience (aligned with original CV + volunteer role) -->
+<h2>💼 Professional Experience</h2>
+<div class="exp-item">
+<div class="exp-title">Software Developer (Volunteer) – Preston City of Sanctuary</div>
+<div class="exp-meta">Oct 2025 – Present · Preston, UK</div>
+<div class="exp-desc">Website maintenance, fixing HTML/CSS issues, adding new pages using Bootstrap. Provide IT support and basic digital skills training to refugees and asylum seekers. Collaborate with the team to improve the organisation’s online presence.</div>
+</div>
+<div class="exp-item">
+<div class="exp-title">Postdoctoral Researcher – Complutense University of Madrid</div>
+<div class="exp-meta">2020 – 2021 · Madrid, Spain</div>
+<div class="exp-desc">Developed simulation models for route planning using Java and multi‑agent systems. Published results in top AI journals (Elsevier).</div>
+</div>
+<div class="exp-item">
+<div class="exp-title">Assistant Professor – Islamic Azad University, Iran</div>
+<div class="exp-meta">2010 – 2020 · Iran</div>
+<div class="exp-desc">Taught software engineering, web development, and databases. Supervised 100+ student projects (many with Django/PHP/MySQL). Led curriculum updates to include modern frameworks.</div>
+</div>
+<div class="exp-item">
+<div class="exp-title">Director of ICT – Islamic Azad University, Iran</div>
+<div class="exp-meta">2003 – 2009 · Marvdasht, Iran</div>
+<div class="exp-desc">Led a team of 5 developers to build university information systems (student records, library management). Full‑stack role: front‑end, backend (PHP/MySQL), and server administration.</div>
+</div>
+<br/><br/>
+<!-- Education & Training (only verified from original CV) -->
+<h2>🎓 Education &amp; Training</h2>
+<div class="edu-item">
+<div class="exp-title">Diploma in Full Stack Software Development</div>
+<div class="exp-meta">Code Institute (2025 – 2026) · HTML, CSS, JavaScript, Python, Django, PostgreSQL, Git, Heroku</div>
+</div>
+<div class="edu-item">
+<div class="exp-title">PhD in Computer Science</div>
+<div class="exp-meta">University of Technology Malaysia (2010–2013) – Multi-agent reinforcement learning for route guidance</div>
+</div>
+<div class="edu-item">
+<div class="exp-title">MSc in IT Engineering</div>
+<div class="exp-meta">Shiraz University, Iran</div>
+</div>
+<div class="edu-item">
+<div class="exp-title">BSc Mathematics</div>
+<div class="exp-meta">Razi University, Iran</div>
+</div>
+<!-- Selected Publications (peer-reviewed, original CV) -->
+<h2>📄 Selected Publications</h2>
+<ul class="publication-list" style="list-style: none; padding-left:0;">
+<li>• Zolfpour‑Arokhlo, M. et al. (2014). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197614000086" target="_blank">Modelling route planning using Q‑learning with multi‑agent systems</a> – <em>Engineering Applications of Artificial Intelligence</em> (Elsevier)</li>
+<li>• Zolfpour‑Arokhlo, M. et al. (2013). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417412010019" target="_blank">Multi‑agent supply chain route planning</a> – <em>Expert Systems with Applications</em> (Elsevier)</li>
+<li>• Full list available on <a href="https://scholar.google.com/citations?user=WBXYhfQAAAAJ&amp;hl=en" target="_blank">Google Scholar</a></li>
+</ul>
+<!-- Certifications & Achievements (from original CV) -->
+<h2>🏅 Certifications &amp; Achievements</h2>
+<ul>
+<li>Patent: Route Guidance Algorithm using Multi-agent Reinforcement Learning (2012)</li>
+<li>Reviewer for <em>IEEE Transactions on Cybernetics</em>, <em>Elsevier</em>, <em>Springer</em></li>
+<li>Editor‑in‑Chief, <em>International Journal of AI</em> (2013–present)</li>
+</ul>
+<div class="ref-note">
+            📎 References available upon request. Full portfolio &amp; GitHub repos linked above.
+        </div>
+</div>
+</div>
 <script>
     // Toggle between card and list view for projects
     const cardView = document.getElementById('cardView');
